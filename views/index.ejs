@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+
+  <title> Your To Do List Express</title>
+</head>
+
+<body>
+
+  <h1>Let's Get Crushing! </h1>
+
+  <section class="main">
+  <h2>What do you need to get done?</h2>
+
+    <section class="top">
+      <h3>Add it here...  <span class="countElement">  </span> </h3>
+      <input class="input" type="text" name="" placeholder="add item here" value="">
+      <button class="create" type="" name="button"> Add  </button>
+    </section>
+
+
+    <section class="bottom">
+      <h2>Stufff to Get Done</h2>
+        <p></p>
+        <h1><span class="countElement">  </span></h1>
+      <button class="clear" type="button" name="button"> Erase All Items</button>
+      <button class="clearCompleted" type="button" name="button"> Remove Completed Items </button>
+
+      <ul class="list">
+        <% for(var i=0; i<tasks.length; i++) {%>
+        <% if (tasks[i].completed) {%>
+          <p></p>
+        <li class="done"> <span><%= tasks[i].task %></span> <button class="remove" type="button" name="button"> Remove </button>   </li>
+        <%}%>
+          <% if (!tasks[i].completed) {%>
+            <p></p>
+        <li> <span><%= tasks[i].task %></span> <button class="remove" type="button" name="button"> Remove </button>  </li>
+        <%}%>
+      <%}%>
+      </ul>
+    </section>
+
+  </section>
+
+  <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
